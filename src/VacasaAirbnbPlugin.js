@@ -4,9 +4,6 @@ import { FlexPlugin } from 'flex-plugin';
 import { PayIcon, PayIconActive} from './components/CustomIcons'
 import { Icon, InlineIcon } from '@iconify/react';
 import airbnbIcon from '@iconify-icons/simple-icons/airbnb';
-
-
-//import CustomTaskListContainer from './components/CustomTaskList/CustomTaskList.Container';
 import reducers, { namespace } from './states';
 
 const PLUGIN_NAME = 'VacasaAirbnbPlugin';
@@ -30,13 +27,13 @@ export default class VacasaAirbnbPlugin extends FlexPlugin {
   
   
     const airbnbChannel = flex.DefaultTaskChannels.createChatTaskChannel(
-    'airbnb',
-    (task) => {
-      return task.taskChannelUniqueName === 'chat' && task.attributes.type === 'airbnb';
-    }, 
-    <Icon icon={airbnbIcon} style={{color: 'white', backgroundColor: '#FF0750'}} />,
-    <Icon icon={airbnbIcon} style={{color: '#FF0750', backgroundColor: 'white'}} />,
-    "#FFFFFF"
+      'airbnb',
+      (task) => {
+        return task.taskChannelUniqueName === 'chat' && task.attributes.type === 'airbnb';
+      }, 
+      <Icon icon={airbnbIcon} style={{color: 'white', backgroundColor: '#FF0750'}} />,
+      <Icon icon={airbnbIcon} style={{color: '#FF0750', backgroundColor: 'white'}} />,
+      "#FFFFFF"
     
   );
 
